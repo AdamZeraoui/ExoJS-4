@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(160, 160, 160);
 }
 
 #wrapped{
@@ -7,10 +7,11 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
-
+    background-color: rgba(160, 160, 160, 0);
 }
 
 .squareFb{
+    flex-flow: column;
     display : flex;
     height: 150px;
     width: 150px;
@@ -21,6 +22,7 @@
 
 }
 .squareX{
+    flex-flow: column;
     display : flex;
     height: 150px;
     width: 150px;
@@ -31,13 +33,26 @@
 
 }
 
-#square{
+.square{
+    padding: 5px;
     display : flex; 
+    transition: 1s;
+
+}
+
+.squareBis{
+    display : flex; 
+    padding: 5px;
+    border-radius: 20px;
+    transition: 1s;
+
+
 }
 
 .squareInsta{
     
     display : flex;
+    flex-flow: column;
     height: 150px;
     width: 150px;
     margin: 5px;
@@ -50,6 +65,7 @@
 .icone{
     display : flex;
     position: relative;
+    top:25px;
     background-color: rgba(255, 255, 255, 0);
     transition: 2s;
 }
@@ -59,6 +75,7 @@
     position: relative;
     background-color: rgba(0, 0, 0, 0);
     transition: 2s;
+    top:0px;
 }
 
 
@@ -68,9 +85,32 @@ i{    color : white;
 }
 
 h2{
+    background-color: rgba(255, 255, 255, 0);
     color:white;
     padding-top: 50px;
     display: flex;
     text-align: center;
     justify-content: center;
+}
+
+h1{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.text{
+    display: flex;
+    position: relative;
+    color: rgba(240, 248, 255, 0);
+    background-color: rgba(240, 248, 255, 0);
+    top:10px;
+    transition: 1s;
+}
+
+.textBis{
+    position: relative;
+    top:10px;
+    display: flex;
+    color: aliceblue;
+    background-color: rgba(240, 248, 255, 0);
+    transition: 5s;
 }

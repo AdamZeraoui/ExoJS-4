@@ -1,4 +1,6 @@
 const icones = document.querySelectorAll(".icone")
+const squares = document.querySelectorAll(".square")
+const texts = document.querySelectorAll(".text")
 
 
 icones.forEach(function(icone){
@@ -21,22 +23,41 @@ icones.forEach(function(icone){
 
 
 
-
-
-document.getElementById("#square").forEach(function(square){
-        square.addEventListener("click",function(){
-        if(square.getElementById == "square"){
-            documentdocument.getElementById("#square").style.transform = 'border-radius: 0%;';
-            documentdocument.getElementById("#square").toggle("square") 
-            documentdocument.getElementById("#square").toggle("squareBis")
-            
+squares.forEach(function(square){
+    square.addEventListener("click",function(){
+        if(square.classList == "square"){
+            square.classList.toggle("square") 
+            square.classList.toggle("squareBis")
+        
         }else{
-            square.style.transform = 'border-radius: 25%;';
-            documentdocument.getElementById("#square").toggle("square")
-            documentdocument.getElementById("#square").toggle("squareBis")
-            
+            square.classList.toggle("square")
+            square.classList.toggle("squareBis")
+        
         }
 
     })
    
 });
+
+
+texts.forEach(function(text){
+    text.addEventListener("click",function(){
+        if(text.classList == "text"){
+            text.classList.toggle("text")
+            text.classList.toggle("textBis")
+
+        }else{
+            text.classList.toggle("text")
+            text.classList.toggle("textBis")
+
+        }
+    })
+
+});
+
+const click = document.body
+click.onclick = function(){
+ document.documentElement.style.backgroundColor = "red"
+click.style.backgroundColor =  "rgba(160, 160, 160, 0)"
+
+}
