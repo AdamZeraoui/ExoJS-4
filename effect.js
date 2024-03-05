@@ -20,12 +20,12 @@ squares.forEach(function(square) {
         
         const backgroundColor = window.getComputedStyle(square).getPropertyValue("background-color");
 
-        if (document.body.style.backgroundColor == backgroundColor) {
+        if (square.classList.contains("squareBis")) { //check if the class squareBis is enable
             document.body.style.backgroundColor = initialBackgroundColor;
-            square.style.boxShadow = ""
+            square.style.boxShadow = "" //return to initial status of the background color and the shadow-box color
         } else {
             document.body.style.backgroundColor = backgroundColor;
-            square.style.boxShadow = `0px 50px 20px -40px ${backgroundColor}`;
+            square.style.boxShadow = `0px 50px 20px -40px ${backgroundColor}`; //change the background color and the shadow-box color to the color of the square selected
         }
 
 
@@ -33,7 +33,7 @@ squares.forEach(function(square) {
         icones.forEach(function(icone) {
             if (icone.parentElement == square) {
                 toggleClass(icone, "icone", "iconeBis");
-                icone.style.transform = (icone.classList.contains("icone")) ? 'rotate(0deg)' : 'rotate(360deg)';
+                icone.style.transform = (icone.classList.contains("icone")) ? 'rotate(0deg)' : 'rotate(360deg)'; //spine and change class
             }
         });
         
@@ -41,7 +41,7 @@ squares.forEach(function(square) {
         
         texts.forEach(function(text) {
             if (text.parentElement == square) {
-                toggleClass(text, "text", "textBis");
+                toggleClass(text, "text", "textBis"); 
             }
         });
     });
